@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* border: none; */
+}
+
+.section_test{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100svh;
+    place-items: center;
+}
+
+.button_test{
+    width: 8rem;
+    aspect-ratio: 1;
+    background-color: rgb(213, 67, 67);
+    border: none;
+}
+
+.button_test:hover{
+    cursor: pointer;
+}
+
+
+/* ANIMATION ROTATION */
+@keyframes rotation {
+    from {transform: rotate(0);}
+    to {transform: rotate(360deg);}
+}
+
+.button_test.joue[data-anim="rotation"] {
+    animation: rotation 3s linear alternate 2;
+}
+
+
+/* ANIMATION FADING */
+@keyframes fading {
+    from {opacity: 100%;}
+    to {opacity: 25%;}
+}
+
+.button_test.joue[data-anim="fading"] {
+    animation: fading 3s linear alternate 2;
+}
+
+
+/* ANIMATION LEFT-TRANSLATION */
+@keyframes left-translation {
+    from {translate: 0;}
+    to {translate: -2rem;}
+}
+
+.button_test.joue[data-anim="left-translation"] {
+    animation: left-translation 3s ease-in-out alternate 2;
+}
+
+
+/* ANIMATION RIGHT TRANSLATION */
+@keyframes right-translation {
+    from {translate: 0;}
+    to {translate: 2rem;}
+}
+
+.button_test.joue[data-anim="right-translation"] {
+    animation: right-translation 3s ease-in-out alternate 2;
+}
+
+
+/* ANIMATION SCALING */
+@keyframes scaling {
+    from {scale: 1;}
+    to {scale: 2;}
+}
+
+.button_test.joue[data-anim="scaling"] {
+    animation: scaling 3s linear alternate 2;
+}
+
+
+/* ANIMATION SIZING */
+@keyframes sizing {
+    from {width: 8rem;}
+    to { width: 4rem;}
+}
+
+.button_test.joue[data-anim="sizing"] {
+    animation: sizing 3s linear alternate 2;
+}
+
+
+/* ANIMATION MORPHING */
+@keyframes morphing {
+    from {border-radius: 0;}
+    to {border-radius: 50%;}
+}
+
+.button_test.joue[data-anim="morphing"] {
+    animation: morphing 3s linear alternate 2;
+}
+
+
+/* ANIMATION 3D-RETURN */
+@keyframes d3-return {
+    from {transform: perspective(600px) rotateY(0);}
+    to {transform: perspective(600px) rotateY(360deg);}
+}
+
+.button_test.joue[data-anim="d3-return"] {
+    animation: d3-return 3s linear alternate 2;
+}
+
+/* ANIMATION COLOR-BOUNCE */
+@keyframes color-bounce {
+    0% {transform: translateY(3rem); background-color:blue ;}
+    25% {transform: translateY(1rem); background-color: brown;}
+    50% {transform: translateY(3rem); background-color: yellow;}
+    75% {transform: translateY(1.5rem); background-color: green;}
+    85% {transform: translateY(3rem); background-color: white;}
+    92% {transform: translateY(2.5rem); background-color: black;}
+    100% {transform: translateY(3rem); background-color: pink;}
+}
+
+.button_test.joue[data-anim="color-bounce"]{
+    animation: color-bounce 3s linear alternate ;
+}
